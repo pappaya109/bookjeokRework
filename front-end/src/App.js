@@ -1,13 +1,14 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import JoinPage from './pages/JoinPage';
 
 
 function App() {
   return (
    <div>
     <Routes>
-      {/* <Route to='/' element={}></Route> */}
-      {/* <Route to='/' element={}></Route> */}
+      {/* <Route path='/' ></Route> */}
+      <Route path='/join' element={<JoinPage/>}></Route>
     </Routes>
    </div>
   );
