@@ -1,0 +1,22 @@
+@use "../../../color" as *;
+
+.wrapper {
+  background-color: yellowgreen;
+  border: 1px solid $text-5;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+
+  .titleArea {
+    border-radius: 10px 10px 0px 0px;
+    background-color: $primary;
+    position: relative;
+    top: 0;
+    padding: 1.5em 2em 0em 2em;
+  }
+
+  p {
+    max-height: 20em;
+    overflow: scroll;
+    padding: 0em 3em;
+  }
+}
