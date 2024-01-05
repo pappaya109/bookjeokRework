@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import ModalLogin from '../components/ModalLogin';
 
 const Mainpage = () => {
     return (
-        <div>Mainpage</div>
+        <div>
+            <ModalLogin/>
+        </div>
     )
 }
 

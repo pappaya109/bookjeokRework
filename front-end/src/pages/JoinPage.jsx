@@ -1,7 +1,36 @@
-import React from 'react'
-import styles from './JoinPage.module.scss'
-
+import React, { useState } from 'react';
+import styles from './JoinPage.module.scss';
+import TagList from '../components/TagList';
 const JoinPage = () => {
+    const [tagList, setTagList] = useState([]);
+    const [tagNameList, setTagNameList] = useState([]);
+    const [userInfo, setUserInfo] = useState();
+    
+    const handleAddTagList = (tag_idx, tag_name) => {
+        setTagList(tagList => [...tagList, { tag_idx: tag_idx, tag_name }]);
+      }
+    
+      const handleAddTagNameList = (tag_name) => {
+        setTagNameList(tagNameList => [...tagNameList, tag_name]);
+      }
+    
+      const filterTagList = (tag_id) => {
+        const filtered = tagList.filter((tag) => {
+          return tag.tag_id !== tag_id;
+        })
+        setTagList(filtered);
+      }
+    
+      const filterTagNameList = (tag_name) => {
+        const filtered = tagNameList.filter((tag) => {
+          return tag !== tag_name;
+        })
+        setTagNameList(filtered);
+      }
+    const handleJoin = () => {
+
+    }
+
     return (
         <main className={styles.wrapper}>
             <h2 className={styles.title}>회원가입</h2>
@@ -12,7 +41,7 @@ const JoinPage = () => {
                         <p className={styles.id}>아이디</p>
                         <div className={styles.signUpIdCon}>
                             <input
-                                className={styles.idInput}
+                                className={styles.commonInput}
                                 type="text"
                                 placeholder='영문 소문자 및 숫자만 입력가능합니다.'
                                 // onChange={(event) => setUserId(event.target.value)}
@@ -72,14 +101,14 @@ const JoinPage = () => {
                     </div>
                 </div>
                 <div className={styles.tagContainer}>
-                    {/* <TagList
+                    <TagList
                         tagNames={tagNameList}
                         handleAddTagNameList={handleAddTagNameList}
                         filterTagNameList={filterTagNameList}
                         tags={tagList}
                         handleAddTagList={handleAddTagList}
                         filterTagList={filterTagList}
-                    /> */}
+                    />
                 </div>
                 <button
                     className={styles.btnJoin}
