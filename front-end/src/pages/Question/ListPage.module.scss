@@ -1,0 +1,22 @@
+.listSection {
+  width: "75rem";
+  border-top: "solid 1px #eee";
+  display: "flex";
+  justify-content: "center";
+  margin: "auto";
+  background-color: "#ffffff";
+}
+.listTitle {
+  display: "flex";
+  width: "100%";
+  justify-content: "space-between";
+}
+
+.button {
+  padding-top: 1.5rem;
+}
+.qnaCardContainer {
+  width: auto;
+  height: auto;
+  margin-bottom: 1rem;
+}
