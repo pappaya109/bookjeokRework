@@ -1,0 +1,32 @@
+// @use "@/styles/_color.scss" as *;
+
+.tagTitle {
+  margin-right: .5rem;
+  margin-left: .5rem;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  min-width: 3rem;
+  height: 2rem;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: all ease .2s;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 1px 2px 2px #ccc;  
+  }
+}
+
+.tagTitle--include {
+  user-select: none;
+  opacity: .5;
+  &:hover {
+    cursor: default;
+    transform: translateY(0);
+    box-shadow: none;  
+  }
+}

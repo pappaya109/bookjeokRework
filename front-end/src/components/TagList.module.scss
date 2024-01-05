@@ -1,0 +1,19 @@
+
+.tagContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+    .tagWrapper {
+      margin-top: 2rem;
+      .tagTitle {
+  
+      }
+      .tagBlock {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+      }
+    }
+  }
