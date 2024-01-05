@@ -1,7 +1,15 @@
 import React from 'react'
+
 import styles from './ListPage.module.scss';
+// import QnACard from '../components/common/QnACard/QnACard';
+import FillButton from '../../components/source/Button/FillButton'
+
 
 const ListPage = () => {
+    const handleClick = (title) => {
+        console.log(`${title} button clicked!`);
+    }
+
     return (
         <section className={styles.listSection}>
             <div>
@@ -14,7 +22,7 @@ const ListPage = () => {
                         />
                     </div>
                 </div>
-                {
+                {/* {
                     qnaData.map((a, i) => {
                         return (
                             <div className='styles.qnaCardContainer'
@@ -32,7 +40,7 @@ const ListPage = () => {
                             </div>
                         )
                     })
-                }
+                } */}
             </div>
         </section >
     )

@@ -1,0 +1,17 @@
+@use "../../../color" as *;
+
+.buttonContainer {
+  width: 4.5rem;
+  height: 1.8rem;
+  background-color: $text-8;
+  transition: all ease 0.2s;
+  border: none;
+
+  .buttonTitle {
+    color: $text-1;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
