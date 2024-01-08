@@ -1,0 +1,78 @@
+// @use "@/styles/_color.scss" as *;
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #333, $alpha: .2);
+  button {
+    border : none;
+  }
+
+  input{
+    border: 2px #E0E0E0 solid;
+    border-radius: 5px;
+    margin: 0 0 2em 0;
+    padding: 0.8em 0 0.8em 0.5em;
+    font-size: 1em;
+    color: gray;
+}
+  .modal {
+    width: 35em;
+    height: 38em;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(142, 142, 142);
+    border-radius: 0.9em;
+    box-shadow: 0px 5px 10px 0px lightgray;
+
+    h1 {
+
+        text-align: center;
+    }
+    hr {
+        border: 0.5px solid lightgray;
+    }
+    .btnBox {
+        width: 100%;
+        text-align: right;
+    }
+    .logCon {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+    }
+
+    .btn_login{
+        background-color: #A1CFDD;
+        border-radius: 5px;
+        color:white;
+        padding: 0.5em 0;
+        font-size: 1.2em;
+        
+        &:hover {
+            cursor: pointer;
+        }    
+    }
+    .close {
+        background-color: rgba($color: #ffffff, $alpha: .0);
+        font-size: 1.5em;
+        padding: 0.5em 1em;
+    }
+  }
+  a {
+    letter-spacing: -0.05em;
+    word-spacing: 0.2em;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+  }
+}
+
