@@ -6,8 +6,8 @@ const conn = require('../config/database');
 // 중복 아이디 확인
 router.post('/chkId', (req, res) => {
     // console.log('check Id router!', req.body)
-    let {id} = req.body;
-    let sql = 'SELECT id FROM user_table WHERE id = ?'
+    let { user_id } = req.body;
+
     conn.query(sql, [id], (err,rows)=>{
         if (err == null) {
             if (rows.length > 0) {
@@ -20,13 +20,12 @@ router.post('/chkId', (req, res) => {
         }
     })
 })
-
 // 회원가입 
 router.post('/join', (req, res)=>{
     console.log('join router',req.body)
-    const {id, pw, email, user_name, address} = req.body
-    let sql = 'INSERT INTO user_table (id, pw, email, user_name, address) value(?, ?, ?, ?, ?)'
-    conn.query(sql, [id, pw, email, user_name, address], (err, rows)=>{
+    const { user_id, user_pw, user_name, user_email, user_nick, tags } = req.body
+    let sql = 'INSERT INTO user_table (user_id, user_pw, user_name, user_email, user_nick, tags) value(?, ?, ?, ?, ?, ?)'
+    conn.query(sql, [user_id, user_pw, user_name, user_email, user_nick, tags], (err, rows)=>{
         console.log(rows)
         if(rows) {
             res.json({
@@ -38,7 +37,6 @@ router.post('/join', (req, res)=>{
             })
         }
     })
-  
 })
 
 // 로그인 
@@ -61,4 +59,10 @@ router.post('/login', (req, res)=>{
         }
     })
 })
+
+// 회원정보 수정
+
+// 회원 탈퇴
+
+
 module.exports = router;
