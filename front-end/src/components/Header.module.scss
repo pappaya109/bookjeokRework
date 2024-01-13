@@ -1,0 +1,94 @@
+@use "../color" as *;
+
+a {
+    text-decoration: none;
+    color: $text-1;
+    white-space: nowrap
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.WrapHeader {
+    height: 130px;
+    // border:solid 1px red;
+}
+
+.userNav {
+    font-size: 0.8rem;
+    // width: 12%;
+    // position: absolute;
+    // top: 10px;
+    // right: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    float: right;
+    text-align: center;
+    padding: 0.5rem;
+
+    >* {
+        margin-right: 0.5rem;
+    }
+
+    .MenuLink {
+        // border: solid 1px black;
+        padding: 0 0.5rem;
+        letter-spacing: -2px;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+.logo {
+
+    // position: absolute;
+    display: flex;
+    width: 100%;
+
+    // left: 45%;
+    // top: 3%;
+    * {
+        margin: 0 auto;
+        height: 40px;
+    }
+}
+
+.mainNav {
+    // border:solid 1px red;
+
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    word-spacing: -1px;
+    // height: 100%;
+    width: 100%;
+    // position: relative;
+    // top: 80%;
+    // left: 38%;
+
+    display: flex;
+    // justify-content: space-around;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 0.5rem;
+
+    .MenuLink {
+        padding: 0.5rem 2rem;
+        letter-spacing: -2px;
+        text-align: center;
+        // border:solid 1px red;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .userNav {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 1023px) {}
+
+@media (max-width: 767px) {}
