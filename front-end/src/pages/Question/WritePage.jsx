@@ -20,6 +20,9 @@ const WritePage = () => {
                         q_views: 0
                     }
                 )
+                .then((res) => {
+
+                })
         )
 
     }
