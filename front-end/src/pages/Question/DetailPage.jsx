@@ -4,7 +4,12 @@ import FillModifiBtn from '../../components/source/Button/FillModifiBtn';
 import AnswerCard from '../../components/common/AnswerCard/AnswerCard';
 
 const DetailPage = () => {
+    const questionData = {
 
+    }
+    const answerData = {
+        
+    }
     const handleAlert = () => {
         return (
             alert('변경되었습니다!')

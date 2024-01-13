@@ -1,10 +1,19 @@
 import React from 'react';
-import ModalLogin from '../components/ModalLogin';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+import Banner from '../components/Banner';
+import Search from '../components/Search';
+import BookContainer from '../components/BookContainer';
 
 const Mainpage = () => {
     return (
         <div>
-            <ModalLogin/>
+            <Header />
+            <Banner />
+            <Search />
+            <BookContainer />
+            <Footer />
         </div>
     )
 }
