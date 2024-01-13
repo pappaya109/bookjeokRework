@@ -1,10 +1,12 @@
-import React from 'react';
-import ModalLogin from '../components/common/ModalLogin/ModalLogin';
+import React, { useContext } from 'react';
+import { modalStore } from '../App';
 
 const Mainpage = () => {
+    const { showModal, setShowModal } = useContext(modalStore);
     return (
         <div>
-            <ModalLogin/>
+            <button onClick={()=> setShowModal(true)}>Login</button>
+            Mainpage
         </div>
     )
 }
