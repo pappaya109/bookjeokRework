@@ -16,7 +16,12 @@ const ModalLogin = () => {
       user_pw : password
     })
     .then(res => {
-      console.log(res.data)
+      if(res.data.msg == 'login success') {
+        alert("로그인에 성공했습니다!")
+        setShowModal(false)
+      } else {
+        alert('로그인에 실패했습니다...')
+      }
     })
   }
 
