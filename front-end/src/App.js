@@ -7,6 +7,7 @@ import WritePage from "./pages/Question/WritePage";
 import DetailPage from "./pages/Question/DetailPage";
 import { createContext, useState } from "react";
 import ModalLogin from "./components/common/ModalLogin/ModalLogin";
+import TestPage from "./pages/TestPage";
 export const modalStore = createContext();
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/qna' element={<ListPage />}></Route>
           <Route path='/qna_write' element={<WritePage />}></Route>
           <Route path='/qna_detail' element={<DetailPage />}></Route>
+          <Route path='/test' element={<TestPage/>}></Route>
         </Routes>
 
         <Routes>

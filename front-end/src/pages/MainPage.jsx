@@ -16,8 +16,6 @@ const Mainpage = () => {
             <Search />
             <BookContainer />
             <Footer />
-            <button onClick={()=> setShowModal(true)}>Login</button>
-            Mainpage
         </div>
     )
 }
