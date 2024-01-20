@@ -7,7 +7,7 @@ const conn = require('../config/database');
 router.post('/chkId', (req, res) => {
     // console.log('check Id router!', req.body)
     let { user_id } = req.body;
-
+    let sql = ''
     conn.query(sql, [id], (err,rows)=>{
         if (err == null) {
             if (rows.length > 0) {
@@ -24,7 +24,7 @@ router.post('/chkId', (req, res) => {
 router.post('/join', (req, res)=>{
     console.log('join router',req.body)
     const { user_id, user_pw, user_name, user_email, user_nick, tags } = req.body
-    let sql = 'INSERT INTO user_table (user_id, user_pw, user_name, user_email, user_nick, tags) value(?, ?, ?, ?, ?, ?)'
+    let sql = 'INSERT INTO t_user (user_id, user_pw, user_name, user_email, user_nick, tags) value(?, ?, ?, ?, ?, ?)'
     conn.query(sql, [user_id, user_pw, user_name, user_email, user_nick, tags], (err, rows)=>{
         console.log(rows)
         if(rows) {
@@ -49,7 +49,7 @@ router.post('/login', (req, res)=>{
             console.log(rows)
             res.json({
                 msg: 'login success',
-                user_nick : rows[0].user_nick
+                user_nick : rows.user_nick
             })
         }
         else {

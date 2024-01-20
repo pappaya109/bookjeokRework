@@ -5,9 +5,8 @@ import FillModifiBtn from '../../components/source/Button/FillModifiBtn';
 import AnswerCard from '../../components/common/AnswerCard/AnswerCard';
 
 const DetailPage = () => {
-    const questionData = {
 
-    const [questionData, setQuestionData] = useState({});
+    const [questionData, setQuestionData] = useState();
     const [answerData, setAnswerData] = useState([]);
 
     useEffect(() => {
@@ -32,7 +31,7 @@ const DetailPage = () => {
                     }
                 )
                 .then(res => {
-
+                    
                 })
 
         )
