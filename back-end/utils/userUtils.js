@@ -1,4 +1,4 @@
-const connection = require('./../config/database');
+const connection = require('../src/config/database');
 const { executeQuery } = require('./reviewTagUtils');
 
 const checkUserExist = (user_id, callback) => {

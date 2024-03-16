@@ -2,7 +2,7 @@ const express = require('express');
 const { checkUserExist } = require('../utils/userUtils');
 const router = express.Router();
 // const { connectTagReview, addTagCount } = require('../utils/userUtils');
-const config = require('../config/database.js');
+const config = require('../src/config/database.js');
 
 
 // 모든 질문 컬럼 가져오기 

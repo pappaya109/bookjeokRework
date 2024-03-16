@@ -19,7 +19,7 @@ app.use(express.json());
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/question', qnaRouter);
-// app.use('/book', bookRouter);
+app.use('/book', bookRouter);
 // app.use('/comment', commentRouter);
 // app.use('/review', reviewRouter);
 // app.use('/tag', tagRouter);

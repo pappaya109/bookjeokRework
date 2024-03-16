@@ -1,4 +1,4 @@
-const connection = require('./../config/database');
+const connection = require('../src/config/database');
 const { getUserName } = require('./userUtils');
 
 const connectTagReview = async (review_idx, tags, callback) => {

@@ -4,16 +4,13 @@ import FillButton from '../components/source/Button/FillButton'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
-    const handleClick = () => {
-        console.log('Clicked^ㅅ^')
-    }
     return (
-        <section className={styles.WrapHeader}>
+        <div className={styles.WrapHeader}>
             {/*우측 최상단 네비게이션 */}
             <nav className={styles.userNav}>
-                <FillButton title={"책 추가"} handleClick={console.log(handleClick)} />
-                <Link className={styles.MenuLink} href={'#'}>로그인</Link>
-                <Link className={styles.MenuLink} href={'#'}>회원가입</Link>
+                <FillButton title={"책 추가"} />
+                <Link className={styles.MenuLink} >로그인</Link>
+                <Link className={styles.MenuLink} to='/join'>회원가입</Link>
             </nav>
 
             {/* 로고 */}
@@ -32,7 +29,7 @@ const Header = () => {
                 <Link className={styles.MenuLink} href={'#'} >개발 도서관</Link>
                 <Link className={styles.MenuLink} href={'#'}>개발 인</Link>
             </nav>
-        </section>
+        </div>
     )
 }
 

@@ -1,4 +1,3 @@
-/* 모달창을 화면 중앙. 최상단에 노출 */
 .wrapper {
     width: 80%;
     min-width: 62rem;
@@ -9,7 +8,6 @@
 }
 
 .title {
-    width: 100%;
     margin-bottom: 2%;
 }
 
@@ -20,15 +18,13 @@
     align-items: center;
 }
 
-.signUpCon {
+.inputBox {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 30px 0px;
 
-    .inputBox {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 0 30px 0px;
-        align-items: center;
-    }
 }
 
 .commonInput {
