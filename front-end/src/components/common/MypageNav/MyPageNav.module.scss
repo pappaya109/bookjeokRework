@@ -1,0 +1,20 @@
+.sideBar {
+    width: 25%;
+    list-style: none;
+    // position: relative;
+    padding: 1em 2.5em;
+    font-size: 1.3em;
+    letter-spacing: -2px;
+    .active {
+        font-weight: bold;
+        margin-left: -0.5em;
+    }
+
+    li {
+        margin: 1.3em 0em;
+        &:hover {
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}

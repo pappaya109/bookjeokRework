@@ -1,16 +1,17 @@
 import React, { useState, useContext, useEffect } from 'react';
-import styles from './MyPage.module.scss';
+import styles from './Mypage.module.scss';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import MyPageBoxBook from '../../components/common/MyPageBox/MyPageBoxBook';
 import BookItem from '../../components/common/BookItem/BookItem';
 import MyPageNav from '../../components/common/MypageNav/MyPageNav';
 
+
 const MyPage = () => {
     // 마이페이지 최초화면
     const [MarkList, setMarkList] = useState([]);
 
-    const BookMarkList = async () => {
+    // const BookMarkList = async () => {
         //     try {
         //         const res = await axios.get('http://localhost:3333/review/myBookmark?user_id=' + 1)
         //         setMarkList(res.data)
@@ -19,9 +20,9 @@ const MyPage = () => {
         //         console.log('error')
         //     }
         // }
-        useEffect(() => {
-            BookMarkList()
-        }, [])
+        // useEffect(() => {
+        //     BookMarkList()
+        // }, [])
 
         return (
             <div className={styles.Wrapper}>
@@ -46,5 +47,5 @@ const MyPage = () => {
             </div>
         )
     }
-}
+// }
 export default MyPage
