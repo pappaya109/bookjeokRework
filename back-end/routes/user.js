@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const conn = require('../config/database');
+const conn = require('../src/config/database');
 
 
 // 중복 아이디 확인
@@ -22,21 +22,23 @@ router.post('/chkId', (req, res) => {
 })
 // 회원가입 
 router.post('/join', (req, res)=>{
-    console.log('join router',req.body)
-    const { user_id, user_pw, user_name, user_email, user_nick, tags } = req.body
-    let sql = 'INSERT INTO t_user (user_id, user_pw, user_name, user_email, user_nick, tags) value(?, ?, ?, ?, ?, ?)'
-    conn.query(sql, [user_id, user_pw, user_name, user_email, user_nick, tags], (err, rows)=>{
-        console.log(rows)
-        if(rows) {
-            res.json({
-                msg: 'join success!'
-            })
-        } else {
-            res.json({
-                msg: 'join failed'
-            })
-        }
-    })
+
+    // 이것들은 다른 파일에 존재해야할 것들
+    // console.log('join router',req.body)
+    // const { user_id, user_pw, user_name, user_email, user_nick, tags } = req.body
+    // let sql = 'INSERT INTO t_user (user_id, user_pw, user_name, user_email, user_nick, tags) value(?, ?, ?, ?, ?, ?)'
+    // conn.query(sql, [user_id, user_pw, user_name, user_email, user_nick, tags], (err, rows)=>{
+    //     console.log(rows)
+    //     if(rows) {
+    //         res.json({
+    //             msg: 'join success!'
+    //         })
+    //     } else {
+    //         res.json({
+    //             msg: 'join failed'
+    //         })
+    //     }
+    // })
 })
 
 // 로그인 

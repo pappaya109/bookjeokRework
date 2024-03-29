@@ -1,0 +1,119 @@
+@use "../../color" as *;
+
+.Wrapper {
+    width: 100%;
+}
+
+.MainWrapper {
+    width: 80%;
+    left: 9%;
+    margin: auto;
+    padding-bottom: 3%;
+
+    header {
+        background-color: $primary-2;
+        height: 10em;
+        border-radius: 1em;
+        position: relative;
+        padding-top: 2em;
+    }
+
+
+    .ContentWrapper {
+        display: flex;
+        height: 100%;
+    }
+
+    .SideBar {
+        width: 25%;
+        position: relative;
+        padding: 1em 2.5em;
+        font-size: 1.3em;
+        letter-spacing: -2px;
+
+        li {
+            margin: 1.3em 0em;
+
+            &:hover {
+                cursor: pointer;
+            }
+            
+            &:nth-child(1) {
+                font-weight: bold;
+                margin-left: -0.5em;
+            }
+        }
+    }
+
+    .ContentBox {
+        width: 90%;
+        position: relative;
+        margin-top: 4em;
+
+        h2 {
+            margin: 0;
+        }
+
+        h3 {
+            margin: 3em 0em 0em 0em; 
+        }
+
+    }
+}
+
+
+.ProfileBox {
+    // background-image: url('/assets/userprofile.svg');
+    background-size: cover;
+    width: 4.69em;
+    height: 4.69em;
+    margin: auto;
+}
+
+
+.UserNameSpace {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 0.5em;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.BookWrapper {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dummybook {
+    width: 15rem;
+    height: 20rem;
+    background-color: grey;
+}
+
+.LikesReviewWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.QuesTitle {
+    border-radius: 0.5em;
+    border: 1px solid $stroke-1;
+    padding: 0.5em 1.5em;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: -2px;
+
+    &:nth-child(2n-1) {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
+
+.LinkWrapper {
+    width: 98%;
+    text-align: right;
+    margin-bottom: 2%;
+}
